@@ -73,14 +73,13 @@ function showConcertInfo(inputParameter) {
     // default songs
     inputParameter = "Imagine Dragons - Birds";
   }
-  
+
   axios
     //still havent fig
 
     .get(
-      `https://rest.bandsintown.com/artists/${inputParameter}/events?app_id=codingbootcamp`,
-      
-      )
+      `https://rest.bandsintown.com/artists/${inputParameter}/events?app_id=codingbootcamp`
+    )
 
     .then(function(response, err) {
       if (err) {
@@ -92,7 +91,7 @@ function showConcertInfo(inputParameter) {
         var date = moment(data[i].datetime).calendar();
 
         console.log(/--------------------------/);
-        
+
         console.log("Venue Name: ", data[i].venue.name);
         console.log(
           "Venue Location: ",
@@ -103,9 +102,8 @@ function showConcertInfo(inputParameter) {
       }
     });
 }
-// movie 
+// movie
 function showMovieInfo(inputParameter) {
-
   if (inputParameter === undefined) {
     inputParameter = "Mr. Nobody";
 
@@ -115,27 +113,25 @@ function showMovieInfo(inputParameter) {
 
     console.log("It's on Netflix!");
   }
-  
+
   axios
     .get(
-      `http://www.omdbapi.com/?i=tt3896198&apikey=${
-        process.env.OMDB_ID
-      }&t=${inputParameter}`
-      )
-    
-    .then(function(response,err) {
-      if(err){
+      `http://www.omdbapi.com/?i=tt3896198&apikey=${process.env.OMDB_ID}&t=${inputParameter}`
+    )
+
+    .then(function(response, err) {
+      if (err) {
         console.log("Error orrurred:" + err);
         return;
       }
       console.log("+++++++++++++++++++++++++++++++++");
-      
+
       console.log("Title of the movie: ", response.data.Title);
       console.log("Year the movie came out: ", response.data.Year);
       console.log("IMDB Rating of the movie: ", response.data.Ratings[0].Value);
       console.log(
         "Rotten Tomatoes Rating of the movie: ",
-        response.data.Ratings[1].Value 
+        response.data.Ratings[1].Value
       );
       console.log(
         "Country where the movie was produced: ",
@@ -148,12 +144,12 @@ function showMovieInfo(inputParameter) {
     });
 }
 
-function showSomeInfo(){
-	fs.readFile('random.txt', 'utf8', function(err, data){
-		if (err){ 
-			return console.log(err);
-		}
-        var dataArr = data.split(',');
-        UserInputs(dataArr[0], dataArr[1]);
-	});
+function showSomeInfo() {
+  fs.readFile("random.txt", "utf8", function(err, data) {
+    if (err) {
+      return console.log(err);
+    }
+    var dataArr = data.split(",");
+    UserInputs(dataArr[0], dataArr[1]);
+  });
 }
