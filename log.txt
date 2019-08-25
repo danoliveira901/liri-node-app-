@@ -1,0 +1,34 @@
+Artist: Ariana Grande
+Song Name: imagine
+Album: thank u, next
+--------------------------------
+Artist: Travis Scott
+Song Name: goosebumps
+Album: Birds In The Trap Sing McKnight
+--------------------------------
+Movie Title: undefined
+Movie Year: undefined
+Imdb Rating: undefined
+Country: undefined
+Language: undefined
+Plot: undefined
+Actors: undefined
+--------------------------------
+Movie Title: Spider
+Movie Year: 2002
+Imdb Rating: 6.8/10
+Rotten Tomatoes Rating: 84%
+Country: Canada, UK, France
+Language: English
+Plot: A mentally disturbed man takes residence in a halfway house. His mind gradually slips back into the realm created by his illness, where he replays a key part of his childhood.
+Actors: Ralph Fiennes, Miranda Richardson, Gabriel Byrne, Lynn Redgrave
+--------------------------------
+Movie Title: Spider-Man
+Movie Year: 2002
+Imdb Rating: 7.3/10
+Rotten Tomatoes Rating: 90%
+Country: USA
+Language: English
+Plot: When bitten by a genetically modified spider, a nerdy, shy, and awkward high school student gains spider-like abilities that he eventually must use to fight evil as a superhero after tragedy befalls his family.
+Actors: Tobey Maguire, Willem Dafoe, Kirsten Dunst, James Franco
+--------------------------------

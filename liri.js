@@ -63,6 +63,13 @@ function showSongsInfo(inputParameter) {
         console.log("Artist(s): " + songs[i].artists[0].name);
 
         console.log("*****************************");
+
+        logText =[
+          "Artist: " + songs[i].artists[0].name,
+          "Song Name: " + songs[i].name,
+          "Album: " + songs[i].album.name,
+        ].join("\n");
+        logData(logText);
       }
     }
   );
@@ -99,6 +106,8 @@ function showConcertInfo(inputParameter) {
         );
         console.log("Date: ", date);
         console.log(/--------------------------/);
+        
+        
       }
     });
 }
@@ -141,6 +150,19 @@ function showMovieInfo(inputParameter) {
       console.log("Plot of the movie: ", response.data.Plot);
       console.log("Actors in the movie: ", response.data.Actors);
       console.log("+++++++++++++++++++++++++++++++++");
+
+      logText = [
+        "Movie Title: " + response.data.Title,
+        "Movie Year: " + response.data.Year,
+        "Imdb Rating: " + response.data.Ratings[0].Value,
+        "Rotten Tomatoes Rating: " + response.data.Ratings[1].Value,
+        "Country: " + response.data.Country,
+        "Language: " + response.data.Language,
+        "Plot: " + response.data.Plot,
+        "Actors: " + response.data.Actors
+      ].join("\n");
+
+      logData(logText);
     });
 }
 
@@ -150,6 +172,19 @@ function showSomeInfo() {
       return console.log(err);
     }
     var dataArr = data.split(",");
-    UserInputs(dataArr[0], dataArr[1]);
+    inputParameter(inputParameter[0], userOption[1]);
+  });
+}
+
+function logData(logText) {
+  var divider = "\n--------------------------------\n";
+  fs.appendFile("log.txt", logText + divider, function(
+    err
+  ) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("Content Added!");
+    }
   });
 }
