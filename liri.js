@@ -147,3 +147,13 @@ function showMovieInfo(inputParameter) {
       console.log("+++++++++++++++++++++++++++++++++");
     });
 }
+
+function showSomeInfo(){
+	fs.readFile('random.txt', 'utf8', function(err, data){
+		if (err){ 
+			return console.log(err);
+		}
+        var dataArr = data.split(',');
+        UserInputs(dataArr[0], dataArr[1]);
+	});
+}
