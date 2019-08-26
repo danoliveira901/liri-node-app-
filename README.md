@@ -19,12 +19,12 @@ Example
 
 node liri.js movie-this <name of movie>
 
-![GifTastic](screenshots\Capturemovie-this.PNG)
+![node](Capturemovie-this.PNG)
 
 node liri.js spotify-this-song <name of artist or band>
 
-![GifTastic](screenshots\Capturespotify-this-song.PNG)
+![node](Capturespotify-this-song.PNG)
 
 node liri.js concert-this <name of artist or band>
 
-![GifTastic](screenshots\Captureconcert-this.PNG)
+![node](Captureconcert-this.PNG)
