@@ -105,9 +105,9 @@ function showConcertInfo(inputParameter) {
           data[i].venue.city + " " + data[i].venue.region
         );
         console.log("Date: ", date);
+        console.log("offers:", data[i].on_sale_datetime.type);
+        console.log("url:", data[i].url);
         console.log(/--------------------------/);
-        
-        
       }
     });
 }
